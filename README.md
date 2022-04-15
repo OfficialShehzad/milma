@@ -1,6 +1,8 @@
 Made by Shehzad Khan
 
-Made using :
+Made for the technical round of a job interview
+
+Full stack web application made using :
     *Node
     *Express
     *Ejs
