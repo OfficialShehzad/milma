@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #e5e5e5;
+    font-family: 'Poppins';
+}
+
+.landing-page {
+    height: 100vh;
+    background-color: #2C65DA;
+    z-index: 0;
+    position: relative;
+    z-index: 0;
+}
+
+.background-image {
+    position: absolute;
+    height: 100vh;
+    z-index: 1;
+    width:100%;
+    mix-blend-mode: multiply;
+}
+
+.girl {
+    z-index: 3;
+    position: absolute;
+    bottom: 0;
+    left: 20%;
+}
+
+.logo {
+    z-index: 2;
+    position: absolute;
+    top: 5%;
+    left: 5%;
+}
+
+.main-header {
+    z-index: 2;
+    position: absolute;
+    top: 40%;
+    right: 15%;
+}
+
+.about-page {
+    height: fit-content;
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    padding-left: 5%;
+    display: flex;
+    align-items: center;
+}
+
+.about-content {
+    padding: 0 10%;
+    font-weight: 300;
+    color: #313030;
+    line-height: 36px;
+}
+
+.button {
+    font-weight: 600;
+    font-size: 1.5rem;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    padding: 5px 150px;
+    background-color: #2C65DA;
+    width: fit-content;
+    height: fit-content;
+    border-radius: 80px;
+}
+
+.btn-chocolate {
+    background-color: #653425;
+    color:#F7D047;
+}
+
+.btn-vanilla {
+    background-color: #F7D047;
+    color: #653425;
+}
+
+.btn-pista {
+    background-color: #9FDC3C;
+    color:#313030;
+}
+
+.product-header {
+    background-color: #2C65DA;
+    color: #e5e5e5;
+    text-align: center;
+    padding: 30px 0;
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+.product-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.products {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 80px;
+    padding: 20px;
+    border: 6px solid #313030;
+    border-radius: 2rem;
+    box-shadow: rgba(0, 0, 0, .25) 20px 20px 40px 0;
+}
+
+.card-img {
+    border-radius: 2rem;
+}
+
+.chocolate-card {
+    border-color: #653425;
+}
+
+.vanilla-card {
+    border-color: #F7D047;
+}
+
+.pista-card {
+    border-color: #9FDC3C;
+}
+
+.product-details {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.name, .price {
+    font-weight: 600;
+}
+
+.amount {
+    font-weight: 400;
+    opacity: .5;
+}
+
+.footer {
+    height: 70vh;
+    background-color: #2C65DA;
+    color: #e5e5e5;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+}
+
+.follow-us {
+    display: flex;
+    justify-content: end;
+    font-weight: 500;
+    padding-bottom: 20px;
+}
+
+.follow-us img {
+    padding-left: 20px;
+}
+
+.copyright {
+    font-weight: 400;
+}

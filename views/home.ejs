@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milma - Ice Cream</title>
+    <link rel="stylesheet" href="/css/main.css">
+</head>
+<body>
+
+    <div class="landing-page">
+        <img src="/images/background.png" class="background-image">
+        <img src="/images/girl.png" class="girl">
+        <img src="/images/logo.png" class="logo">
+        <img src="/images/main-header.png" class="main-header">
+    </div>
+
+    <div class="about-page">
+        <img src="/images/milkshake-set.png" class="milkshake">
+        <div class="about-content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Debitis expedita soluta ipsum delectus similique ab nostrum necessitatibus placeat tenetur excepturi? Iste nesciunt fuga molestias odio expedita harum inventore assumenda incidunt repudiandae ipsa, ipsum accusantium fugit, minima tenetur nisi voluptatum nostrum labore ut possimus omnis et eveniet doloremque aperiam corporis? Explicabo reprehenderit corporis repellendus id?</p>
+        </div>
+    </div>
+
+
+
+    <div class="product-header">
+        <p>Products</p>
+    </div>
+
+
+
+    <div class="product-section" id="chocolate">
+        <div class="button btn-chocolate">Chocolate</div>
+
+        <div class="products">
+
+            <% for(let i = 0; i < products.length; i++) { %> 
+                <% if (products[i].flavour === 'chocolate') { %> 
+                    
+                    <div class="card <%= products[i].flavour %>-card">
+
+                        <img src="/uploads/<%= products[i].img %> " class="card-img">
+        
+                        <div class="product-details">
+        
+                            <div class="details">
+                                <div class="name"><p><%= products[i].name %> </p></div>
+                                <div class="amount"><%= products[i].amount %> </div>
+                            </div>
+                            
+                            <div class="price">
+                                <p>&#8377; <%= products[i].price %> </p>
+                            </div>
+        
+                        </div>
+                    </div>
+
+
+                <% } %> 
+            <% } %> 
+
+        </div>
+
+    </div>
+
+
+
+    <div class="product-section" id="vanilla">
+        <div class="button btn-vanilla">Vanilla</div>
+        <div class="products">
+
+
+            <% for(let i = 0; i < products.length; i++) { %> 
+                <% if (products[i].flavour === 'vanilla') { %> 
+                    
+                    <div class="card <%= products[i].flavour %>-card">
+
+                        <img src="/uploads/<%= products[i].img %> " class="card-img">
+        
+                        <div class="product-details">
+        
+                            <div class="details">
+                                <div class="name"><p><%= products[i].name %> </p></div>
+                                <div class="amount"><%= products[i].amount %> </div>
+                            </div>
+                            
+                            <div class="price">
+                                <p>&#8377; <%= products[i].price %> </p>
+                            </div>
+        
+                        </div>
+                    </div>
+
+
+                <% } %> 
+            <% } %> 
+
+
+        </div>
+    </div>
+    
+
+
+    <div class="product-section" id="pista">
+        <div class="button btn-pista">Pista</div>
+        <div class="products">
+
+            <% for(let i = 0; i < products.length; i++) { %> 
+                <% if (products[i].flavour === 'pista') { %> 
+                    
+                    <div class="card <%= products[i].flavour %>-card">
+
+                        <img src="/uploads/<%= products[i].img %> " class="card-img">
+        
+                        <div class="product-details">
+        
+                            <div class="details">
+                                <div class="name"><p><%= products[i].name %> </p></div>
+                                <div class="amount"><%= products[i].amount %> </div>
+                            </div>
+                            
+                            <div class="price">
+                                <p>&#8377; <%= products[i].price %> </p>
+                            </div>
+        
+                        </div>
+                    </div>
+
+
+                <% } %> 
+            <% } %> 
+
+        </div>
+    </div>
+
+
+
+    <div class="footer">
+        <div class="footer-logo-section">
+            <img src="/images/logo.png" class="footer-logo">
+        </div>
+        <div class="footer-content">
+            <div class="follow-us">
+                 <p>Follow us</p>
+                 <img src="/images/facebook.png" class="facebook">
+                 <img src="/images/youtube.png" class="youtube">
+                 <img src="/images/linkedin.png" class="linkedin">
+                 <img src="/images/insta.png" class="insta">
+            </div>
+            <div class="copyright">
+                <p>	&#169; Milmaicecream. All rights Reserved.</p>
+            </div>
+        </div>
+    </div>
+
+
+</body>
+</html>

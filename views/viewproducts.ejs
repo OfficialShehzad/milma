@@ -1,0 +1,42 @@
+<%- include('partials/admin-nav') %> 
+
+
+<div class="container d-flex">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>id</th>
+                <th>flavour</th>
+                <th>name</th>
+                <th>amount</th>
+                <th>price</th>
+                <th>image</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% products.forEach((prod) => { %> 
+                <tr>
+                    <td><%= prod._id %> </td>
+                    <td><%= prod.flavour %> </td>
+                    <td><%= prod.name %> </td>
+                    <td><%= prod.amount %> </td>
+                    <td><%= prod.price %> </td>
+                    <td>
+                        <img src="/uploads/<%= prod.img %> " alt="" height="100px" width="100px">
+                    </td>
+                    <td>
+                        <form action="/delete" method="post">
+                            <button type="submit" name="id" class="btn btn-danger" value="<%= prod._id %>">Delete</button>
+                        </form>
+                    </td>
+                </tr>
+            <% }) %> 
+        </tbody>
+    </table>
+</div>
+
+<% if (deleteNotification) { %> 
+    <script>
+      alert('<%= deleteNotification %>')
+      </script>
+<% } %> 

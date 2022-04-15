@@ -1,0 +1,91 @@
+<%- include('partials/admin-nav') %> 
+
+<style>
+    html,
+body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f5f5f5;
+}
+
+.form-signin {
+  width: 100%;
+  max-width: 330px;
+  padding: 15px;
+  margin: auto;
+}
+
+.form-signin .checkbox {
+  font-weight: 400;
+}
+
+.form-signin .form-floating:focus-within {
+  z-index: 2;
+}
+
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+
+
+</style>
+
+<main class="form-signin text-center">
+    <form action="/admin" method="post" enctype="multipart/form-data">
+      <img class="mb-4" src="/images/logo.png" alt="" height="80px" width="80px">
+
+      <div class="input-group mb-3">
+        <label class="input-group-text" for="inputGroupSelect01">Flavour</label>
+        <select class="form-select" id="inputGroupSelect01" name="flavour" required>
+          <option value="chocolate">Chocolate</option>
+          <option value="vanilla">Vanilla</option>
+          <option value="pista">Pista</option>
+        </select>
+      </div>
+  
+      <div class="form-floating">
+        <input type="text" class="form-control" id="name" name="name" placeholder="name" required>
+        <label for="name">Product Name</label>
+      </div>
+
+      <div class="form-floating mt-3">
+        <input type="text" class="form-control" id="amount" name="amount" placeholder="Amount" required>
+        <label for="amount">Amount (e.g. 500ml)</label>
+      </div>
+
+      <div class="form-floating mt-3">
+        <input type="number" class="form-control" id="price" name="price" placeholder="Price" required>
+        <label for="price">Price</label>
+      </div>
+
+      <div class="mt-3">
+        <input class="form-control" name="img" type="file" id="img" required>
+      </div>
+  
+
+
+
+      <button class="mt-4 w-100 btn btn-lg btn-primary" id="submit" type="submit">Add Product</button>
+    </form>
+  </main>
+
+<% if (notification) { %> 
+  <script>
+    alert('<%= notification %>')
+  </script>
+<% } %> 
